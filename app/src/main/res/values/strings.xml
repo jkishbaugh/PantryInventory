@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">Pantry Inventory</string>
+    <string name="action_insert_data">Insert New Item</string>
+    <string name="action_delete_all_entries">Delete All Items</string>
+    <string name="editor_activity_title_new_item">Add an Item</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="category_overview">Item Info</string>
+    <string name="category_product_name">Product Name</string>
+    <string name="category_price">Price</string>
+    <string name="category_quantity">Quantity</string>
+    <string name="category_supplier_name">Supplier Name</string>
+    <string name="category_supplier_pn">Phone Number</string>
+
+    <!-- Hints -->
+    <string name="hint_product_name">Item Name</string>
+    <string name="hint_price">Price</string>
+    <string name="hint_quantity">Quantity</string>
+    <string name="hint_supplier_pn">Phone Number</string>
+
+
+    <!-- Spinner Labels -->
+    <string name="supplier_one">Macey\'s</string>
+    <string name="supplier_two">Smith\'s</string>
+    <string name="supplier_three">Lee\'s</string>
+    <string name="supplier_unknown">Other</string>
+</resources>
