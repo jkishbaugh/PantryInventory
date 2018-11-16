@@ -9,7 +9,15 @@ public class PantryDbHelper extends SQLiteOpenHelper {
     public static final String LOG_TAG = PantryDbHelper.class.getSimpleName();
     public static final String DATABASE_NAME= "product.db";
     public static final int DATABASE_VERSION = 1;
-    public static final String SQL_CREATE_PANTRY_TABLE= "CREATE TABLE pantry(_ID INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, price TEXT NOT NULL, QUANTITY INTEGER DEFAULT 1, Supplier INTEGER DEFAULT 0, Number TEXT);";
+    public static final String SQL_CREATE_PANTRY_TABLE= "CREATE TABLE " + PantryEntry.TABLE_NAME + " ( " +
+                                    PantryEntry.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                                    PantryEntry.COLUMN_PRODUCT_NAME + " TEXT, " +
+                                    PantryEntry.COLUMN_PRICE + " INTEGER, " +
+                                    PantryEntry.COLUMN_QUANTITY + " INTEGER DEFAULT 1, " +
+                                    PantryEntry.COLUMN_SUPPLIER_NAME + " TEXT, " +
+                                    PantryEntry.COLUMN_SUPPLIER_PHONE + " TEXT);";
+
+
 
     public PantryDbHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

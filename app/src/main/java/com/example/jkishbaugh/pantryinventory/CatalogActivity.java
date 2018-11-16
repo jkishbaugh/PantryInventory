@@ -65,18 +65,18 @@ public class CatalogActivity extends AppCompatActivity {
 
         try {
 
-            displayView.setText("The pantry table contains " + cursor.getCount() + " items.\n\n");
+            displayView.setText("The pantry table contains " + cursor.getCount() + " items.\n");
             displayView.append(PantryEntry._ID + " - " +
                     PantryEntry.COLUMN_PRODUCT_NAME + "\n");
 
-            int idColumnIndex = cursor.getColumnIndex(PantryEntry._ID);
+
+            int idColumnIndex = cursor.getColumnIndex(PantryEntry.COLUMN_ID);
             int nameColumnIndex = cursor.getColumnIndex(PantryEntry.COLUMN_PRODUCT_NAME);
             int priceColumnIndex = cursor.getColumnIndex(PantryEntry.COLUMN_PRICE);
             int quantityColumnIndex = cursor.getColumnIndex(PantryEntry.COLUMN_QUANTITY);
             int supplierColumnIndex = cursor.getColumnIndex(PantryEntry.COLUMN_SUPPLIER_NAME);
             int supplierPhoneColumnIndex = cursor.getColumnIndex(PantryEntry.COLUMN_SUPPLIER_PHONE);
 
-            if (cursor.moveToFirst()) {
 
                 while (cursor.moveToNext()) {
 
@@ -90,7 +90,7 @@ public class CatalogActivity extends AppCompatActivity {
                     displayView.append(("\n" + currentID + " - " +
                             currentName + "-" + currentPrice + "-" + currentQuantity + "-" + currentSupplier + "-" + currentSupplierNumber));
                 }
-            }
+
             } finally{
                 cursor.close();
             }
@@ -117,7 +117,7 @@ public class CatalogActivity extends AppCompatActivity {
     }
 
   private void insertItem(){
-      dbHelper= new PantryDbHelper(this);
+
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
 
